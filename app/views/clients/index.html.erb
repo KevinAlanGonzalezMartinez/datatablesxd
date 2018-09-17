@@ -1,0 +1,44 @@
+<h1>Clients</h1>
+
+<table id="datat" data-source="<%= clients_path(format: :json) %>">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Genero</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody style="text-align: center !important;">
+  </tbody>
+</table>
+
+
+<%= link_to 'Nuevo Cliente', new_client_path %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#datat').dataTable({
+      "processing": true,
+      "serverSide": true,
+      "ajax": $('#datat').data('source'),
+      "pagingType": "full_numbers",
+      "columns": [
+        {"data": 'id'},
+        {"data": 'name'},
+        {"data": 'age'},
+        {"data": 'genre'},
+        {"data": 'show'},
+        {"data": 'edit'},
+        {"data": 'delete'}
+      ]
+      // pagingType is optional, if you want full pagination controls.
+      // Check dataTables documentation to learn more about
+      // available options.
+    });
+  })
+</script>
