@@ -1,24 +1,25 @@
-<h1>Clients</h1>
+<div class="container">
+    <h1>Clientes</h1>
+  <table id="datat" data-source="<%= clients_path(format: :json) %>" class="table table-hover" style="text-align: center !important;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Genero</th>
+        <th>Mostrar</th>
+        <th>Editar</th>
+        <th>Borrar</th>
+      </tr>
+    </thead>
 
-<table id="datat" data-source="<%= clients_path(format: :json) %>">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Edad</th>
-      <th>Genero</th>
-      <th>Mostrar</th>
-      <th>Editar</th>
-      <th>Borrar</th>
-    </tr>
-  </thead>
-
-  <tbody style="text-align: center !important;">
+    <tbody style="text-align: center !important;">
   </tbody>
 </table>
 
 
-<%= link_to 'Nuevo Cliente', new_client_path %>
+<%= link_to 'Nuevo Cliente', new_client_path, class:"btn btn-primary" %>
+</div>
 
 <script type="text/javascript">
   $(document).ready(function(){

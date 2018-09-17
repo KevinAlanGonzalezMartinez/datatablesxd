@@ -64,3 +64,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "jquery-datatables-rails"
 gem "ajax-datatables-rails"
 gem "jquery-rails"
+gem 'bootstrap'
+gem 'mini_racer'
